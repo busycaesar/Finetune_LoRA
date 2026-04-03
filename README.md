@@ -1,24 +1,28 @@
-<!-- Remove the following content when using this template for create repo for project! -->
-This repository serves as a template for all my future project repositories. It contains the common structure, configurations, and files that I use across my projects. The purpose of this repository template is to maintain consistency and standardization across my projects. By using this template, I ensure that all my repositories follow a similar structure and setup, making it easier to manage and maintain them.
-
-While this template is primarily for personal use, contributions and suggestions for improvements are always welcome. If you have ideas for enhancing the template or making it more useful, feel free to submit a pull request or open an issue.
-<!-- XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXS -->
-
-# Project Title
+# Finetune LoRA
 
 ## Description
 
-### Video Explanation
-[![Video Explanation YouTube Link](https://img.youtube.com/vi/t93d8ieZn0Q/0.jpg)](https://www.youtube.com/embed/t93d8ieZn0Q)
+Fine-tuning Google's Gemma 3 1B Instruct model using LoRA (Low-Rank Adaptation) on the [Databricks Dolly 15K](https://huggingface.co/datasets/databricks/databricks-dolly-15k) dataset. The notebook runs on Google Colab using a JAX backend.
 
 ## Tech Stack
-![Image Alt](https://skillicons.dev/icons?i=js,ts)
 
-## How it looks?
+![Image Alt](https://skillicons.dev/icons?i=py)
 
 ## Features
 
+- Loads `gemma3_instruct_1b` from Keras Hub
+- Enables LoRA with rank 4 to reduce trainable parameters
+- Trains on 1,000 examples from Databricks Dolly 15K (no-context entries only)
+- Sequence length capped at 256 tokens
+- AdamW optimizer (lr=5e-5, weight decay=0.01)
+- TopK sampling (k=5) for text generation
+
 ## How to run the project?
 
+1. Open the notebook in Google Colab using the badge at the top of `gemma.ipynb`
+2. Add your Kaggle credentials (`KAGGLE_USERNAME` and `KAGGLE_KEY`) to Colab Secrets
+3. Run all cells in order — the notebook will install dependencies, download the dataset, fine-tune the model, and generate a sample response
+
 ## Author
+
 [Dev J. Shah](https://github.com/busycaesar)
