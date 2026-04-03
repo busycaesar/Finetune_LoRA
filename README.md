@@ -21,4 +21,4 @@ While this template is primarily for personal use, contributions and suggestions
 ## How to run the project?
 
 ## Author
-[Dev Shah](https://github.com/busycaesar)
+[Dev J. Shah](https://github.com/busycaesar)
